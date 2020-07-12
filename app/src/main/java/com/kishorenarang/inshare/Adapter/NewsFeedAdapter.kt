@@ -13,7 +13,7 @@ class NewsFeedAdapter(private val newsList:List<NewsItem>) : RecyclerView.Adapte
     class NewsviewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         val txtnewsHeading: TextView = itemView.findViewById(R.id.txtnewsHeading)
-        val txtnewsSubHeading: TextView = itemView.findViewById(R.id.txtnewsSubHeading)
+        //val txtnewsSubHeading: TextView = itemView.findViewById(R.id.txtnewsSubHeading)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsviewHolder {
@@ -28,7 +28,7 @@ class NewsFeedAdapter(private val newsList:List<NewsItem>) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: NewsviewHolder, position: Int) {
         val currentNewsItem = newsList[position]
         holder.txtnewsHeading.text = currentNewsItem.NewsHeading
-        holder.txtnewsSubHeading.text = currentNewsItem.NewsSubHeading
+        //holder.txtnewsSubHeading.text = currentNewsItem.NewsSubHeading
     }
 
 }

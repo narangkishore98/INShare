@@ -10,39 +10,66 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btnSend"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/send"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/btnReceive"
+            android:layout_height="200dp"
+            android:id="@+id/customView"
+            android:background="@drawable/custom_top_cut"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:elevation="5dp"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnReceive"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/receive"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:elevation="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerViewNewsFeed"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSend" />
+        </View>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewNewsFeed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_news_card"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnReceive" />
+            app:layout_constraintTop_toBottomOf="@+id/customView"
+            tools:listitem="@layout/item_news_card" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:cornerRadius="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/custombutton"
+            android:elevation="20dp"
+            android:text="@string/send"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/customView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/customView"
+            app:layout_constraintVertical_bias="0.32" />
+
+        <Button
+            android:id="@+id/btnReceive"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:cornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/custombutton"
+            android:text="@string/receive"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/customView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSend" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
